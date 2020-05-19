@@ -37,5 +37,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    //buttom navigation view
+    implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
+    compile 'q.rorbin:badgeview:1.1.0'
+
+
 
 }

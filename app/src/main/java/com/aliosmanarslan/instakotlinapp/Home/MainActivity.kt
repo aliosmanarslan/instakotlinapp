@@ -1,4 +1,4 @@
-package com.aliosmanarslan.instakotlinapp
+package com.aliosmanarslan.instakotlinapp.Home
 
 
 /**
@@ -7,10 +7,14 @@ package com.aliosmanarslan.instakotlinapp
  */
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.aliosmanarslan.instakotlinapp.R
 import com.aliosmanarslan.instakotlinapp.utils.ButtomNavigationViewHelper
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    private val ACTIVITY_NO = 0
+    private val TAG = "HomeActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +26,10 @@ class MainActivity : AppCompatActivity() {
     fun setupNavigationView(){
 
         ButtomNavigationViewHelper.setupBottomNavigationView(buttomNavigationView)
+        ButtomNavigationViewHelper.setupNavigation(context = this, buttomBottomNavigationViewEx = buttomNavigationView)
+        var menu = buttomNavigationView.menu
+        var menuItem = menu.getItem(ACTIVITY_NO)
+        menuItem.setChecked(true)
 
     }
 }
